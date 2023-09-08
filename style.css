@@ -4,27 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* scrollbar-color: transparent transparent;
-  scrollbar-width: 0px;
- */
 }
-
-/* *::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-} */
 
 :root {
   --main-color: #93d7da;
@@ -94,6 +74,7 @@ body {
   height: 1em;
   border-radius: 50%;
   border: 0.125em solid var(--link-color);
+  background-color: var(--link-color);
   transition: all 0.3s ease 0s;
 }
 
@@ -106,10 +87,6 @@ body {
   height: 0;
   width: 0;
   visibility: hidden;
-}
-
-.carousel .carousel__items #slide-1:checked ~ .carousel .carousel__navigation .label-1 {
-  background-color: var(--link-color);
 }
 
 #slide-1:checked ~ .slide-1 {
@@ -136,7 +113,7 @@ body {
 
 @media (max-width: 568px) {
   .carousel {
-    width: 19.375em;
+    width: 100%;
     height: 20em;
   }
   .carousel__items {

@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,900);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #93d7da;
+  --main-bg-color: #222222;
+  --link-color: #1e96e6;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  font-family: 'Roboto';
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 56.25em;
+  height: auto;
+  margin: 0 0.5em;
+}
+
+.carousel__items {
+  width: 400%;
+  display: flex;
+  height: 25em;
+}
+
+.carousel__item {
+  flex: 0 1 25%;
+  transition: all 0.5s ease 0s;
+}
+
+.carousel__item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel__navigation {
+  display: flex;
+  justify-content: end;
+  gap: 0.125em;
+  margin-top: 1.25em;
+  background-color: var(--main-bg-color);
+}
+
+.carousel__label {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--main-bg-color);
+}
+
+.carousel__label span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.125em solid var(--link-color);
+  background-color: var(--link-color);
+  transition: all 0.3s ease 0s;
+}
+
+.carousel__label span:hover {
+  background-color: var(--main-color);
+  border: 0.125em solid var(--main-color);
+}
+
+.carousel__input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#slide-1:checked ~ .slide-1 {
+  margin-left: 0;
+}
+
+#slide-2:checked ~ .slide-1 {
+  margin-left: -25%;
+}
+
+#slide-3:checked ~ .slide-1 {
+  margin-left: -50%;
+}
+
+#slide-4:checked ~ .slide-1 {
+  margin-left: -75%;
+}
+
+.carousel__text {
+  margin-top: 1.1em;
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+}
+
+@media (max-width: 568px) {
+  .carousel {
+    width: 100%;
+    height: 20em;
+  }
+  .carousel__items {
+    height: 15em;
+  }
+
+  .carousel__text {
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  .carousel__navigation {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssMemeSlider</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="carousel">
+        <div class="carousel__items">
+          <input type="radio" name="slide" id="slide-1" class="carousel__input" />
+          <input type="radio" name="slide" id="slide-2" class="carousel__input" />
+          <input type="radio" name="slide" id="slide-3" class="carousel__input" />
+          <input type="radio" name="slide" id="slide-4" class="carousel__input" />
+
+          <div class="carousel__item slide-1">
+            <img src="./assets/images/1.jpg" alt="slide 1" />
+            <p class="carousel__text">The task is to create</p>
+          </div>
+          <div class="carousel__item slide-2">
+            <img src="./assets/images/2.jpg" alt="slide 2" />
+            <p class="carousel__text">CSS meme slider</p>
+          </div>
+          <div class="carousel__item slide-3">
+            <img src="./assets/images/3.jpg" alt="slide 3" />
+            <p class="carousel__text">without any JS</p>
+          </div>
+          <div class="carousel__item slide-4">
+            <img src="./assets/images/4.jpg" alt="slide 4" />
+            <p class="carousel__text">any libraries and positioning</p>
+          </div>
+        </div>
+
+        <div class="carousel__navigation">
+          <label for="slide-1" class="carousel__label label-1"><span></span></label>
+          <label for="slide-2" class="carousel__label label-2"><span></span></label>
+          <label for="slide-3" class="carousel__label label-3"><span></span></label>
+          <label for="slide-4" class="carousel__label label-4"><span></span></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
